@@ -1,0 +1,49 @@
+/**
+ * Style
+ */
+body {
+    margin: 8px auto;
+    color: #111;
+    width: fit-content;
+    overflow-y: scroll;
+    background: rgb(222, 180, 118);
+    float: left;
+    margin-left: 1rem;
+}
+
+h1 {
+    border-bottom: 1px solid rgb(44, 37, 37);
+}
+
+h2 {
+    border-bottom: 1px solid #ccc;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+td{
+    border-left: #111 solid 1px;
+    border-top: #111 solid 1px;
+}
+
+header nav {
+    background-color: rgb(85, 51, 9);
+    padding: 10px;
+    border-radius: 1rem;
+    width: fit-content;
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color:black;
+}
+
+footer {
+    background: rgb(85, 51, 9);
+    padding: 1rem;
+}

@@ -1,0 +1,27 @@
+<%- include("header", {title: title}); %>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Namn</th>
+        <th>Address</th>
+        <th>Telenummer</th>
+    </tr>
+    <% for (const row of res[0]) { %>
+    <tr>
+        <td><%= row.kund_id %></td>
+        <td><%= row.namn %></td>
+        <td><%= row.adress %></td>
+        <td><%= row.telefonnummer %></td>
+        <td><button>
+            <a href="/eshop/create_order/<%= row.kund_id %>">Create Order</a>
+        </button></td>
+    </tr>
+
+    <% }; %>
+</table>
+
+<p>
+    <a href="index">Index</a>
+</p>
+
+<%- include("footer"); %>

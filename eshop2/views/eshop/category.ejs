@@ -1,0 +1,20 @@
+<%- include("header", {title: title}); %>
+<body>
+    <table>
+        <tr>
+            <th>Kategorier</th>
+        </tr>
+        <% for (const row of res[0]) { %>
+        <tr>
+            <td><%= row.kategori %></td>
+        </tr>
+        <% }; %>
+    </table>
+
+</body>
+
+<p>
+    <a href="index">Index</a>
+</p>
+
+<%- include("footer"); %>

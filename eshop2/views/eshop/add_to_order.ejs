@@ -1,0 +1,32 @@
+<%- include("header", {title: title}); %>
+<table>
+    <tr>
+        <th>Namn</th>
+        <th>Kategori</th>
+        <th>Pris</th>
+        <th>Antal i lager</th>
+        <th><label for="price">Antal</label></th>
+    </tr>
+    <% for (const row of res[0]) { %>
+    <form class="label-left" method="post" action="/eshop/add_to_order">
+            <tr>
+                <input id="order_id" type="hidden" name="order_id" value="<%= account[0] %>">
+                <input id="id" type="hidden" name="id" value="<%= row.produkt_id %>">
+                <td><%= row.namn %></td>
+                <td><%= row.kategori %></td>
+                <td><%= row.pris %></td>
+                <td><%= row.antal %></td>
+                <td>
+                    <input id="quantity" type="number" name="quantity">
+                </td>
+                <td>
+                    <input type="submit" name="doit" value="Edit">
+                </td>
+
+            </tr>
+
+    </form>
+    <% }; %>
+</table>
+
+<%- include("footer"); %>

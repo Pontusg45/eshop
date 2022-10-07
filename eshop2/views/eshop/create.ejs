@@ -1,0 +1,28 @@
+<%- include("header", {title: title}); %>
+
+<h1>Create new product</h1>
+
+<form class="label-left" method="post" action="/eshop/create">
+    <fieldset>
+        <legend>Create product</legend>
+
+        <label for="n">Namn</label>
+        <input id="n" type="text" name="n">
+
+        <label for="c">Kategori</label>
+        <input id="c" type="text" name="c">
+
+        <label for="p">Pris</label>
+        <input id="p" type="number" name="p">
+
+        <label for="d">Beskrivning</label>
+        <input id="d" type="text" name="d">
+
+        <label for="q">Antal</label>
+        <input id="q" type="number" name="q">
+
+        <input type="submit" name="doit" value="Create">
+    </fieldset>
+</form>
+
+<%- include("footer"); %>

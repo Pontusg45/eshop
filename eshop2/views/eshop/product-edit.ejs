@@ -1,0 +1,27 @@
+<%- include("header", {title: title}); %>
+
+<h1>Edit account details</h1>
+
+<p>This is details for account <%= account %>.</p>
+
+<form class="label-left" method="post" action="/eshop/edit">
+    <fieldset>
+        <legend>Edit account</legend>
+
+        <label for="id">ID</label>
+        <input id="id" type="text" name="id" readonly value="<%= res[0].produkt_id %>">
+
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" value="<%= res[0].namn %>">
+
+        <label for="desc">Beskrivning</label>
+        <input id="desc" type="text" name="desc" value="<%= res[0].beskrivning %>">
+
+        <label for="price">Pris</label>
+        <input id="price" type="number" name="price" value="<%= res[0].pris %>">
+
+        <input type="submit" name="doit" value="Edit">
+    </fieldset>
+</form>
+
+<%- include("footer"); %>

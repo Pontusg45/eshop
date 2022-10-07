@@ -1,0 +1,22 @@
+<%- include("header", {title: title}); %>
+
+<h1>Delete account</h1>
+
+<p>This is details for account <%= account %>.</p>
+
+<pre><%#= JSON.stringify(res, null, 4) %></pre>
+
+<% res = res[0] %>
+<form class="label-left" method="post" action="/eshop/delete">
+    <fieldset>
+        <legend>Delete account</legend>
+
+        <label for="id">Id</label>
+        <input id="id" type="text" name="id">
+
+
+        <input type="submit" name="doit" value="Delete account">
+    </fieldset>
+</form>
+
+<%- include("footer"); %>
